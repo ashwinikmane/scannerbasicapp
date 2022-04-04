@@ -1,0 +1,38 @@
+<mvc:View
+    controllerName="scannerbasicapp.controller.View1"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:ndc="sap.ndc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <html:div id="scandit-barcode-picker"></html:div>
+                        <Bar id="_IDGenBar1">
+                            <contentLeft>
+                                <Button id="_IDGenButton1" press="onBarcodeScan"  type="Accept" icon="sap-icon://bar-code" text="Start Scanning"></Button>
+                            </contentLeft>
+                            <contentRight>
+                                <Button id="_IDGenButton2" press="onStopScan" type="Reject" icon="sap-icon://bar-code" text="Stop scanning"></Button>
+                            </contentRight>
+                        </Bar>
+                        <Bar id="_IDGenBar2">
+                            <contentMiddle>
+                                <Label id="_IDGenLabel1" text="Scan Result:"/>
+                                <Text id="sampleBarcodeScannerResult" text="" class="sapUiTinyMarginBegin"/>
+                            </contentMiddle>
+                        </Bar>
+
+                    </content>
+                        
+                    
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
